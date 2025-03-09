@@ -1,0 +1,25 @@
+[package]
+name = "ocr-credential-detector"
+version = "0.1.0"
+edition = "2024"
+description = "画像内のクレデンシャル（APIキー、パスワードなど）を検出するライブラリ"
+license = "MIT"
+
+[dependencies]
+ocrs = "0.10.0"   # OCRエンジン
+thiserror = "1.0" # エラー処理
+regex = "1.5"     # 正規表現
+image = "0.24"    # 画像処理
+rten = "0.16.0"   # OCRモデルのロード
+
+[[example]]
+name = "basic_detection"
+path = "examples/basic_detection.rs"
+
+[[example]]
+name = "custom_detector"
+path = "examples/custom_detector.rs"
+
+[[example]]
+name = "batch_processing"
+path = "examples/batch_processing.rs"
